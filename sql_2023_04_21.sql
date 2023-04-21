@@ -11,11 +11,13 @@ rollback;
 commit;
 
 select * from memberT;
-
+desc memberT;
 CREATE TABLE memberT(
-    mem_uid varchar2(15) not null,
+    mem_uid varchar2(15) primary key not null,
     mem_pwd varchar2(15) not null,
     mem_name varchar2(10) not null,
     mem_email varchar2(50) not null,
-    mem_address varchar2(100)
-)
+    mem_addr varchar2(100)
+);
+
+DROP TABLE memberT;
