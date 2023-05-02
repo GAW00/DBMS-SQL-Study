@@ -69,7 +69,7 @@ FROM DUAL;
 
 
 
---DECODE(A, B, C) : A == B이면 C A != B이면 NULL
+--DECODE(A, B, C) : A == B이면 C, A != B이면 NULL
 SELECT 5 "D"
 --실무에서 많이 사용
      , DECODE('A', 'A', '1')
