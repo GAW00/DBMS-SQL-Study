@@ -20,6 +20,9 @@ CREATE TABLE memberT(
     mem_addr varchar2(100)
 );
 
+INSERT INTO memberT VALUES('abc', '123', 'ABC', 'abc@abc.com', 'a-b-c');
+UPDATE MEMBERT SET MEM_UID = 'ZZZ', MEM_NAME = 'XXX' WHERE MEM_UID = 'abc';
+
 DROP TABLE memberT;
 DROP TABLE BOARDT;
 
@@ -34,8 +37,9 @@ CREATE TABLE boardT(
     B_TITLE VARCHAR2(80),       -- 4. 글 제목
     B_CONTENT VARCHAR2(3000),   -- 5. 글 내용
     B_DATE DATE,                -- 6. 작성일자
-    B_HIT number(5) default 0,  -- 7. 조회수
-    B_PWD varchar2(12)          -- 8. 비밀번호
+    B_HIT NUMBER(5) DEFAULT 0,  -- 7. 조회수
+    B_PWD VARCHAR2(12),         -- 8. 비밀번호
+    B_IP VARCHAR2(15)           -- 9. ip주소
 );
 
 
