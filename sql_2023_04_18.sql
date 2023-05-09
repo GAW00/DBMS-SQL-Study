@@ -60,7 +60,7 @@ FROM DUAL;
 
 SELECT 5 "D"
 --DECODE(A, B, C, D, E, F) : A == B 이면 C
---                           A != B 이고 이면 A == D 이면 E
+--                           A != B 이고 A == D 이면 E
 --                           A != B 이고 A != D 이면 F
      , DECODE('A', 'A', '1', 'C', '2', '3') "D"
      , DECODE('A', 'B', '1', 'A', '2', '3') "D"

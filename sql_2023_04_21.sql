@@ -24,11 +24,16 @@ INSERT INTO memberT VALUES('abc', '123', 'ABC', 'abc@abc.com', 'a-b-c');
 UPDATE MEMBERT SET MEM_UID = 'ZZZ', MEM_NAME = 'XXX' WHERE MEM_UID = 'abc';
 
 DROP TABLE memberT;
+
+--=============================
+
 DROP TABLE BOARDT;
 
 select * from boardt;
+SELECT B_ID, B_NAME, B_EMAIL, B_TITLE, B_CONTENT, TO_CHAR(B_DATE,'YYYY-MM-DD HH24:MM') B_DATE, B_HIT, B_PWD, B_IP, B_REF, B_STEP, B_LEVEL FROM BOARDT ORDER BY B_REF, B_LEVEL, B_STEP, B_ID;
+
 select rownum, a.* from(select * from boardt) a;
-DELETE FROM BOARDT where b_id=1;
+DELETE FROM BOARDT where b_id=2;
 
 CREATE TABLE boardT(
     B_ID NUMBER(5) primary key, -- 1. 글번호
@@ -39,7 +44,10 @@ CREATE TABLE boardT(
     B_DATE DATE,                -- 6. 작성일자
     B_HIT NUMBER(5) DEFAULT 0,  -- 7. 조회수
     B_PWD VARCHAR2(12),         -- 8. 비밀번호
-    B_IP VARCHAR2(15)           -- 9. ip주소
+    B_IP VARCHAR2(15),          -- 9. ip주소
+    B_REF NUMBER(5),            -- 10. 글 그룹
+    B_STEP NUMBER(5),           -- 11. 글 위치
+    B_LEVEL NUMBER(5)           -- 12. 글 레벨
 );
 
 
