@@ -3,13 +3,62 @@ SELECT * FROM EMP;
 SELECT * FROM STUDENT;
 SELECT * FROM EMP2;
 SELECT * FROM FRUIT;
+SELECT * FROM LOAN;
+-- 실습문제 3장 A11
+SELECT L_CODE 대출종목코드
+     , L_STORE 대출지점
+     , L_DATE 대출일자
+     , L_QTY 대출건수
+     , L_TOTAL 대출액
+     , SUM(L_TOTAL) OVER(PARTITION BY L_CODE, L_STORE ORDER BY L_DATE) 누적대출금액
+FROM LOAN;
+
+
+
+
+-- 실습문제 3장 A10
+SELECT L_DATE 대출일자
+     , L_CODE 대출종목코드
+     , L_QTY 대출건수
+     , L_TOTAL 대출총액
+     , SUM(L_TOTAL) OVER(ORDER BY L_DATE) 누적대출금액
+FROM LOAN
+WHERE L_STORE = 1000;
+
+
+
+
+
+-- 실습문제 3장 A9
+SELECT DEPTNO
+     , ENAME
+     , SAL
+     , SUM(SAL) OVER(PARTITION BY DEPTNO) "SUM_DEPT"
+     , ROUND(RATIO_TO_REPORT(SUM(SAL)) OVER(PARTITION BY DEPTNO) * 100, 2) "%"
+FROM EMP
+GROUP BY DEPTNO, ENAME, SAL;
+
+
+
+
+-- 실습문제 3장 A8
+SELECT DEPTNO
+     , ENAME
+     , SUM(SAL) OVER() "TOTAL_SAL"
+     , ROUND(RATIO_TO_REPORT(SUM(SAL)) OVER() * 100, 2) "%"
+FROM EMP
+GROUP BY DEPTNO, ENAME, SAL
+ORDER BY "%" DESC;
+
+
+
+
 -- 실습문제 3장 A7
 SELECT DEPTNO
      , ENAME
      , SAL
      , SUM(SAL) OVER(PARTITION BY DEPTNO ORDER BY SAL) TOTAL
 FROM EMP;
-
 
 
 
@@ -23,7 +72,6 @@ SELECT COUNT(*) || 'EA (' || COUNT(*) / COUNT(*) * 100 || '%)' "TOTAL"
      , COUNT(DECODE(SUBSTR(TEL, 1, INSTR(TEL, ')') - 1), '053', 0)) || 'EA (' || COUNT(DECODE(SUBSTR(TEL, 1, INSTR(TEL, ')') - 1), '053', 0)) / COUNT(*) * 100 || '%)' "DAEGU"
      , COUNT(DECODE(SUBSTR(TEL, 1, INSTR(TEL, ')') - 1), '055', 0)) || 'EA (' || COUNT(DECODE(SUBSTR(TEL, 1, INSTR(TEL, ')') - 1), '055', 0)) / COUNT(*) * 100 || '%)' "GEONGNAM"
 FROM STUDENT;
-
 
 
 
