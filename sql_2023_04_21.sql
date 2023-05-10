@@ -52,3 +52,14 @@ CREATE TABLE boardT(
 
 
 COMMIT;
+
+
+
+-----------------------------------------------
+
+--*.데이터 사전 (USER_ 로 시작되는 것이 있음)
+SELECT * FROM USER_TAB_COLUMNS;
+SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE, DATA_LENGTH, NULLABLE FROM USER_TAB_COLUMNS;
+
+
+
