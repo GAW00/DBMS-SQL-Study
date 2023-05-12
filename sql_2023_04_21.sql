@@ -47,7 +47,10 @@ CREATE TABLE boardT(
     B_IP VARCHAR2(15),          -- 9. ip주소
     B_REF NUMBER(5),            -- 10. 글 그룹
     B_STEP NUMBER(5),           -- 11. 글 위치
-    B_LEVEL NUMBER(5)           -- 12. 글 레벨
+    B_LEVEL NUMBER(5),          -- 12. 글 레벨
+    B_FNAME VARCHAR2(100),      -- 13. 파일명
+    B_FSIZE NUMBER(10),         -- 14. 파일 크기
+    B_RFNAME VARCHAR2(100)      -- 15. 실제 파일명
 );
 
 
