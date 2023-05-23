@@ -1,0 +1,147 @@
+-- ANSI(American National Standards Institute) JOIN(데이터 베이스의 특성을 타지 않음 : 오라클이 아니어도 사용 가능)
+SELECT A.EMPNO
+     , A.ENAME
+     , B.DNAME
+FROM EMP A JOIN DEPT B
+ON A.DEPTNO = B.DEPTNO; -- A.DEPTNO : FK, B.DEPTNO : PK
+
+
+
+-- ORACLE JOIN
+-- 등가 조인(EQUI(valent) JOIN)
+-- 12행 : 사원이 한 부서만 선택해서 조회됨
+SELECT A.EMPNO
+     , A.ENAME
+     , B.DNAME
+FROM EMP A, DEPT B1
+-- 조인(JOIN) 조건 : 조인하는 테이블 중 한 쪽이 PK여야 한다
+WHERE A.DEPTNO = B.DEPTNO; -- A.DEPTNO : FK, B.DEPTNO : PK
+
+
+-- 48행 중복 데이터 多
+SELECT A.EMPNO
+     , A.ENAME
+     , B.DNAME
+FROM EMP A
+   , DEPT B;
+
+
+
+-- 같은 속성명은 별칭으로 테이블 성택해서 정렬 가능
+-- DEPTNO(EMP), DEPTNO_1(DEPT)
+SELECT *
+FROM EMP A, DEPT B
+--ORDER BY A.DEPTNO; -- EMP.DEPTNO
+ORDER BY B.DEPTNO; -- DEPT.DEPTNO1
+
+
+
+-- 카티션 프로덕트(CARTESIAN PRODUCT)
+-- 48행(4 * 12) 동일한 이름의 사람 중복
+SELECT *
+FROM  EMP
+    , DEPT
+ORDER BY ENAME;
+
+-- 4
+SELECT COUNT(*) FROM DEPT;
+
+-- 12
+SELECT COUNT(*) FROM EMP;
+
+
+
+-- ERD(ENTITY RELATIONSHIP DIAGRAM) : 객체 관계도(모델링) -> 설계
+-- 설계(논리 : 한글로 작성/물리 : 영문으로 작성) -> 테이블은 물리모델(엔티티는 논리모델)
+-- 실무에서는 ERwin 많이 사용, 무료버전은 오라클 데이터 모델러(특정 버전 이상 부터 SQL Developer 에 포함)
+
+-- 설계도를 가지고 건물을 만든다(ddl -> table)
+-- 반대로 작업 => 건물을 가지고 설계도를 만든다(table -> ddl)
+
+
+
+-------------------------------------------------
+
+
+
+SELECT * FROM GIFT;
+SELECT * FROM CUSTOMER;
+SELECT * FROM STUDENT;
+SELECT * FROM PROFESSOR;
+SELECT * FROM DEPARTMENT;
+-- 실습문제 8장-4
+-- 비등가 조인(NON-EQUI JOIN) => 범위(BETWEEN ~, <, >, <=, >=)
+SELECT C.GNAME CUST_NAME
+     , TO_CHAR(C.POINT, '999,999') POINT
+     , G.GNAME GIFT_NAME
+FROM CUSTOMER C , GIFT G
+WHERE C.POINT >= G.G_START AND C.POINT <= G.G_END;
+--WHERE C.POINT BETWEEN G.G_START AND G.G_END;
+
+SELECT C.GNAME CUST_NAME
+     , TO_CHAR(C.POINT, '999,999') POINT
+     , G.GNAME GIFT_NAME
+FROM CUSTOMER C JOIN GIFT G
+ON C.POINT >= G.G_START AND C.POINT <= G.G_END;
+--ON C.POINT BETWEEN G.G_START AND G.G_END;
+
+
+
+
+
+-- 실습문제 8장-3
+SELECT S.NAME STU_NAME
+     , P.NAME PROF_NAME
+  FROM STUDENT S
+     , PROFESSOR P
+ WHERE S.PROFNO = P.PROFNO
+   AND S.DEPTNO1 = '101';
+
+
+SELECT S.NAME STU_NAME
+     , P.NAME PROF_NAME
+  FROM STUDENT S JOIN PROFESSOR P
+    ON S.PROFNO = P.PROFNO
+ WHERE S.DEPTNO1 = '101';
+
+
+
+
+
+-- 실습문제 8장-2
+-- 2개이상의 테이블 조인시 기준테이블 좌측에 조인을 건다
+SELECT S.NAME STU_NAME
+     , D.DNAME DEPT_NAME
+     , P.NAME PROF_NAME
+  FROM STUDENT S
+     , DEPARTMENT D
+     , PROFESSOR P
+ WHERE S.DEPTNO1 = D.DEPTNO -- STUDENT 테이블(기준 테이블)과 DEPARTMENT 테이블(DEPTNO PK) 조인
+   AND S.PROFNO = P.PROFNO; -- STUDENT 테이블(기준 테이블)과 PROFESSOR 테이블(PROFNO PK) 조인
+
+
+
+SELECT S.NAME STU_NAME
+     , D.DNAME DEPT_NAME
+     , P.NAME PROF_NAME
+FROM STUDENT S JOIN PROFESSOR P
+               ON S.PROFNO = P.PROFNO
+               JOIN DEPARTMENT D
+               ON P.DEPTNO = D.DEPTNO
+ORDER BY D.DNAME;
+
+
+
+
+-- 실습문제 8장-1
+-- 15행 => STUDENT 테이블 20행, PROFESSOR 테이블 16행 => STUDENT 테이블에서 PROFNO 속성이 NULL인 튜플을 제하고(5행) 나온 결과
+SELECT STU.NAME STU_NAME
+     , PROF.NAME PROF_NAME
+FROM STUDENT STU, PROFESSOR PROF
+WHERE STU.PROFNO = PROF.PROFNO;
+
+
+SELECT STU.NAME STU_NAME
+     , PROF.NAME PROF_NAME
+FROM STUDENT STU JOIN PROFESSOR PROF
+ON STU.PROFNO = PROF.PROFNO;
