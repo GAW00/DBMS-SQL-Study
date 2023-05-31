@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8FC0E1CF-1DC8-11D4-66DB-2CFBE00BA94E" schemaObject="1F5B75C9-41DB-A264-BE56-C0AFF8FFE377" name="BUYTBL">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>MODEL</sourceObjSchema>
+<sourceObjName>BUYTBL</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>9A35E752-DE95-C784-B717-0D9077921093</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USERID" id="84C35D82-CFFA-3F73-95D0-F151C0CB156C">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>BUYTBL</sourceObjSchema>
+<sourceObjName>USERID</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>8CAE292E-6F50-4E06-46A5-C329BB016CAB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODNAME" id="15B41390-6BD5-610B-FEB3-0912DADBCFDE">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>BUYTBL</sourceObjSchema>
+<sourceObjName>PRODNAME</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>D1ED4D3E-3813-C6D6-EA48-395143175CCB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="E6851639-4933-2ABB-5EDF-468BD5D077D4">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>BUYTBL</sourceObjSchema>
+<sourceObjName>PRICE</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>65B5FF9A-C692-BEBC-0F13-CA0F658DA7D8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AMOUNT" id="845C1DAA-18B0-BB06-1751-2F77FA265670">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>BUYTBL</sourceObjSchema>
+<sourceObjName>AMOUNT</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>F0675E8C-BF6C-A394-B253-AEC1442DF834</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERTBL_USERID" id="3A39C4A8-B13F-C4C5-FB9A-40F1E8C3FBE7">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>BUYTBL</sourceObjSchema>
+<sourceObjName>USERTBL_USERID</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>AB19CBF7-4AB1-3530-BBD3-F87CE95D55C1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FF737AB-B45B-0D02-4B65-38B98447473D" referredColumn="086277B4-4DAD-5600-01AF-F7FD72F95353"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1A2B0ACC-060C-CA52-1C53-DE1AFFBA52FA" name="BUYTBL_USERTBL_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A39C4A8-B13F-C4C5-FB9A-40F1E8C3FBE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

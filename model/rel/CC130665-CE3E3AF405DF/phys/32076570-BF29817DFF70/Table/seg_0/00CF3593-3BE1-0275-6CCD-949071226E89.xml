@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="도서재고" directorySegmentName="seg_0" id="00CF3593-3BE1-0275-6CCD-949071226E89">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:49:19 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="도서명" id="1CF5D49C-7556-77BD-DDA8-6B92739376F5">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:51:48 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="재고량" id="60CF9E2F-639E-B398-67DA-14F801AA8B67">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:53:09 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="도서번호" id="9CE48F42-AEE9-1449-8A32-C03B834FC080">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:50:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="도서재고_PK" id="661C9CD5-44F9-F321-2862-BBB2F9B7CC5F">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:50:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

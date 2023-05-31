@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="주문회원" directorySegmentName="seg_0" id="33DF8018-3408-CC4C-2081-E98D464DE8A2">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:57:19 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="고객정보_회원번호" id="0173CEB9-0CC8-7235-773F-DEFA29D5A163">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:03:36 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="주문번호" id="B8462E18-E9DB-624E-1D30-A86ED76E4123">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:58:02 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="주문회원_고객정보_FK" id="053973C5-AAD0-6F39-47DB-7B14462CAA21">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:03:36 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="주문회원_PK" id="7C1486DF-999B-91B5-40EB-0F3C8C2EB3CA">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:06:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

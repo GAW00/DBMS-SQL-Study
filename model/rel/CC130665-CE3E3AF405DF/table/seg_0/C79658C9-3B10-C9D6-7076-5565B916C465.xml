@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C79658C9-3B10-C9D6-7076-5565B916C465" name="주문정보">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:54:27 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="주문회원_주문번호" id="775DF746-0958-4336-F9BD-5678958A184B">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:06:20 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D658E8FE-A518-C630-589D-11A77100F888" referredColumn="B8462E18-E9DB-624E-1D30-A86ED76E4123"/>
+</associations>
+</Column>
+<Column name="도서재고_도서번호" id="60F6A721-0C1F-3449-364D-CAB07A9B746B">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:07:00 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E412BD70-D57B-F618-182D-34CB1778AD04" referredColumn="9CE48F42-AEE9-1449-8A32-C03B834FC080"/>
+</associations>
+</Column>
+<Column name="주문수량" id="EE890505-1971-608B-C1A9-90074AC6854F">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:55:27 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="10E880A8-BFF4-099B-9BE6-6121F3BDFBFA" name="주문정보_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:08:15 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="775DF746-0958-4336-F9BD-5678958A184B"/>
+<colUsage columnID="60F6A721-0C1F-3449-364D-CAB07A9B746B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5DE47E9D-8D8F-FA11-992A-CBCB428AF0BB" name="주문정보_주문회원_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:06:20 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="775DF746-0958-4336-F9BD-5678958A184B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B34EA8BE-5306-8A41-51A8-1D6028F6EF29" name="주문정보_도서재고_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:07:00 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60F6A721-0C1F-3449-364D-CAB07A9B746B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

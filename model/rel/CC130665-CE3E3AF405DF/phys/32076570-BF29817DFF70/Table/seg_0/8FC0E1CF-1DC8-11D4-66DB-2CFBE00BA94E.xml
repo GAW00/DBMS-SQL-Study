@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="BUYTBL" directorySegmentName="seg_0" id="8FC0E1CF-1DC8-11D4-66DB-2CFBE00BA94E">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>1F5B75C9-41DB-A264-BE56-C0AFF8FFE377</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>A7D412C4-2EAE-8DD7-FACF-1C1F8A25048F</segment>
+<tableSpace>295819B4-E9E3-CEC8-AE93-C882C461E88C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PRODNAME" id="15B41390-6BD5-610B-FEB3-0912DADBCFDE">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USERTBL_USERID" id="3A39C4A8-B13F-C4C5-FB9A-40F1E8C3FBE7">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AMOUNT" id="845C1DAA-18B0-BB06-1751-2F77FA265670">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USERID" id="84C35D82-CFFA-3F73-95D0-F151C0CB156C">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRICE" id="E6851639-4933-2ABB-5EDF-468BD5D077D4">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="BUYTBL_USERTBL_FK" id="1A2B0ACC-060C-CA52-1C53-DE1AFFBA52FA">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyOraclev11g>

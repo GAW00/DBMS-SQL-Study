@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F3D96849-E39D-6F7A-5A19-02AA7EDB6262" name="buyTBL">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 03:42:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="userId" id="13E537B0-EF8F-E5DF-9266-F7C8CB0E201E">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 03:44:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prodName" id="5D84BC6B-4DC6-F3F5-538F-07833928BD24">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 03:45:04 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="4BC20BE9-48FE-57BB-D1CF-74E1FB3EB35A">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 03:47:27 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="amount" id="3523563E-C750-813E-BEEF-DDEFCB3473C6">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 03:47:41 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="userTBL_userId" id="EE5E3D5C-D3F1-80F7-36B4-58056621942E">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 03:49:17 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="808A23E2-9940-304D-ECC6-78311A405196" referredColumn="712140F4-23C3-F95F-88E8-171585C0FAF4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A31A5160-321B-EB0C-F2B8-6FBD5076F504" name="buyTBL_userTBL_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 03:49:16 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE5E3D5C-D3F1-80F7-36B4-58056621942E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

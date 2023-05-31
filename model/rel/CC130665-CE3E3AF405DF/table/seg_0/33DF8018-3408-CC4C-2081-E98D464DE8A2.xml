@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33DF8018-3408-CC4C-2081-E98D464DE8A2" name="주문회원">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:57:19 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="주문번호" id="B8462E18-E9DB-624E-1D30-A86ED76E4123">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:58:02 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="고객정보_회원번호" id="0173CEB9-0CC8-7235-773F-DEFA29D5A163">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:03:36 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E46CF238-3831-02B3-6811-AFC054A0C84E" referredColumn="725FF38E-75FB-8E71-E543-318BCC4144B7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7C1486DF-999B-91B5-40EB-0F3C8C2EB3CA" name="주문회원_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:06:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8462E18-E9DB-624E-1D30-A86ED76E4123"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="053973C5-AAD0-6F39-47DB-7B14462CAA21" name="주문회원_고객정보_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 06:03:36 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0173CEB9-0CC8-7235-773F-DEFA29D5A163"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

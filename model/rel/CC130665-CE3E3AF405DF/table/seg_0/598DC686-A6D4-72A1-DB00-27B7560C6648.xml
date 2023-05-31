@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="598DC686-A6D4-72A1-DB00-27B7560C6648" schemaObject="1F5B75C9-41DB-A264-BE56-C0AFF8FFE377" name="USERTBL">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>MODEL</sourceObjSchema>
+<sourceObjName>USERTBL</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>331C1A7D-7231-5971-493E-6AA06A2F7EFB</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USERID" id="086277B4-4DAD-5600-01AF-F7FD72F95353">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>USERTBL</sourceObjSchema>
+<sourceObjName>USERID</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>5D8335BF-FBF1-F913-3A94-B699272620AA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERNAME" id="6E7AB15E-E024-BAE3-6547-A13B843098D5">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>USERTBL</sourceObjSchema>
+<sourceObjName>USERNAME</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>624E7A3C-E753-05A6-882F-DEC89E876235</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTHDAY" id="1AE6A7CB-958B-A0BE-8AA8-33D84DF1AA61">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>USERTBL</sourceObjSchema>
+<sourceObjName>BIRTHDAY</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>AFF2867D-C7F5-5776-410F-F3B67D258F05</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDR" id="BB0E7370-844B-2BAD-6F8A-E48470F6EC0F">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>USERTBL</sourceObjSchema>
+<sourceObjName>ADDR</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>4EDB4EA1-ADF3-78F5-BB44-51A0FD8B0DAA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MOBILE" id="1E26F75A-386F-98B3-84D0-3D9592C9FDCF">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>USERTBL</sourceObjSchema>
+<sourceObjName>MOBILE</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>C009E75A-48C9-57BA-B90D-56D19252C8AF</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13 BYTE</dataTypeSize>
+<ownDataTypeParameters>13 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1BDE69CF-0072-11EF-0A56-C82484420A65" name="USERTBL_PK">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>MODEL</sourceObjSchema>
+<sourceObjName>USERTBL_PK</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>2E060E9E-FA1A-FC6F-DE1C-2B06C8ED0EBC</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="086277B4-4DAD-5600-01AF-F7FD72F95353"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B12A72AD-99CC-6EE1-EB87-2AF143E0C710" schemaObject="1F5B75C9-41DB-A264-BE56-C0AFF8FFE377" name="USERTBL_PK">
+<sourceConnName>local-model</sourceConnName>
+<sourceObjSchema>MODEL</sourceObjSchema>
+<sourceObjName>USERTBL_PK</sourceObjName>
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>522EBFDD-46B7-49F0-2442-F7B82E1037C5</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="086277B4-4DAD-5600-01AF-F7FD72F95353"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

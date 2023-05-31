@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="USERTBL" directorySegmentName="seg_0" id="598DC686-A6D4-72A1-DB00-27B7560C6648">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>1F5B75C9-41DB-A264-BE56-C0AFF8FFE377</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>A7D412C4-2EAE-8DD7-FACF-1C1F8A25048F</segment>
+<tableSpace>295819B4-E9E3-CEC8-AE93-C882C461E88C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USERID" id="086277B4-4DAD-5600-01AF-F7FD72F95353">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BIRTHDAY" id="1AE6A7CB-958B-A0BE-8AA8-33D84DF1AA61">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MOBILE" id="1E26F75A-386F-98B3-84D0-3D9592C9FDCF">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USERNAME" id="6E7AB15E-E024-BAE3-6547-A13B843098D5">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDR" id="BB0E7370-844B-2BAD-6F8A-E48470F6EC0F">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="USERTBL_PK" id="B12A72AD-99CC-6EE1-EB87-2AF143E0C710">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>1F5B75C9-41DB-A264-BE56-C0AFF8FFE377</schemaObject>
+<segment>AAA29606-90B5-9C81-1952-9783E3146675</segment>
+<tableSpace>295819B4-E9E3-CEC8-AE93-C882C461E88C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="USERTBL_PK" id="1BDE69CF-0072-11EF-0A56-C82484420A65">
+<createdBy>GGG</createdBy>
+<createdTime>2023-05-23 05:35:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<segment>AAA29606-90B5-9C81-1952-9783E3146675</segment>
+<tableSpace>295819B4-E9E3-CEC8-AE93-C882C461E88C</tableSpace>
+<existingIndex>B12A72AD-99CC-6EE1-EB87-2AF143E0C710</existingIndex>
+<indexSegment>AAA29606-90B5-9C81-1952-9783E3146675</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>
