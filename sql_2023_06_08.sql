@@ -115,7 +115,6 @@ order by deptno, job;
 
 
 
-
 -- 실습문제 11장-12
 select name,
        (select dname

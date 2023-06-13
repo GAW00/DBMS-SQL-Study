@@ -35,3 +35,29 @@ insert into item values('b', 2000, 'bb');
 select name, price, description from item;
 
 commit;
+
+------------------------------------------------------------------------
+
+insert into mvc_member values('aaa', '1234', 'abcd');
+
+delete from mvc_member;
+
+select * from mvc_member;
+
+create table mvc_member(
+    mem_uid varchar2(15),
+    mem_pwd varchar2(15),
+    mem_name varchar2(10)
+);
+
+commit;
+
+
+
+
+
+
+
+
+
+
