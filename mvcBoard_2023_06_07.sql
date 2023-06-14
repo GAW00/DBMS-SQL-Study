@@ -1,3 +1,15 @@
+select bid, bname, btitle, bcontent, bdate, bhit
+from(
+    select rownum rn, bid, bname, btitle, bcontent, bdate, bhit
+    from mvc_board
+    where ROWNUM <= (2 * 10)
+)
+where rn > (2 - 1) * 10;
+
+select rownum rn, bid, bname, btitle, bcontent, bdate, bhit
+    from mvc_board;
+
+
 delete from mvc_board;
 
 drop table mvc_board;
@@ -10,6 +22,7 @@ insert into mvc_board values(1, 'a', 'aa', 'aaa', sysdate, 0);
 insert into mvc_board values(4, 'd', 'dd', 'ddd', sysdate, 0);
 
 select bid, bname, btitle, bcontent, bdate, bhit from mvc_board;
+select * from mvc_board;
 
 create table mvc_board(
     bid number(4) primary key,
@@ -33,6 +46,13 @@ insert into item values('a', 1000, 'aa');
 insert into item values('b', 2000, 'bb');
 
 select name, price, description from item;
+
+create table item(
+    name varchar2(20),
+    price number(8),
+    description varchar2(100)
+);
+
 
 commit;
 
