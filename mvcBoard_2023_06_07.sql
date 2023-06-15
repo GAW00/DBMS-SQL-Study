@@ -5,6 +5,7 @@ from(
     where ROWNUM <= (2 * 10)
 )
 where rn > (2 - 1) * 10;
+--order by ROWNUM;
 
 select rownum rn, bid, bname, btitle, bcontent, bdate, bhit
     from mvc_board;
