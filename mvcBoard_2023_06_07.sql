@@ -1,3 +1,6 @@
+select count(*) from mvc_board;
+
+
 select bid, bname, btitle, bcontent, bdate, bhit
 from(
     select rownum rn, bid, bname, btitle, bcontent, bdate, bhit
@@ -73,6 +76,28 @@ create table mvc_member(
 
 commit;
 
+
+
+
+
+
+------------------------------------------------------------------
+select * from product;
+select * from category;
+
+insert into product(procode, catecode, proname, proprice, proinfo) values(1, 1, 'chair a', '$1000', '의자 a 입니다');
+insert into product(procode, catecode, proname, proprice, proinfo) values(2, 1, 'chair b', '$2000', '의자 b 입니다');
+insert into product(procode, catecode, proname, proprice, proinfo) values(3, 1, 'chair c', '$3000', '의자 c 입니다');
+insert into product(procode, catecode, proname, proprice, proinfo) values(4, 2, 'bed a', '$1100', '침대 a 입니다');
+insert into product(procode, catecode, proname, proprice, proinfo) values(5, 3, 'desk a', '$5100', '책상 a 입니다');
+insert into product(procode, catecode, proname, proprice, proinfo) values(6, 4, 'sofa a', '$8000', '소파 a 입니다');
+
+insert into category(catecode, catename) values(1, 'chair');
+insert into category(catecode, catename) values(2, 'bed');
+insert into category(catecode, catename) values(3, 'tabledesk');
+insert into category(catecode, catename) values(4, 'sofa');
+
+commit;
 
 
 
