@@ -109,20 +109,36 @@ FOREIGN KEY(REVCODE)
 REFERENCES PRODUCT_REV(REVCODE);
 
 
+insert into admin values('ADMIN00', 'ADMIN00', 'Y');
 
+delete from notice where noticode = 2;
 
-
-
+select * from product_ord;
+select * from notice;
+select * from admin;
 select * from product;
 select * from category;
 select * from member;
+select * from product_op_color;
+select * from product_op_size;
 
 delete from member;
+delete from member where id = 'test';
 
 update product set proimg = 'https://img.77g.com/shopping/prodLimg/w32133.jpg' where proname = 'chair a';
 update product set proimg = 'https://www.imwood.co.kr/news/photo/201502/12474-2-14774.jpg' where proname = 'chair b';
 update product set proimg = 'https://www.thediy.co.kr/data/goods/1/2009/03/2028_tmp_14871638490277large.jpg' where proname = 'chair c';
 update product set proimg = 'https://emons.co.kr/shop/data/goods/main_qk7IiY64Kp7ZiV.jpg' where proname = 'bed a';
+
+insert into cart (cartcode, userid, procode, amount)
+    values (2, 'test1', 1, 1);
+
+insert into product_ord (ordercode, userid, cartcode, name, postcode, addr, etcaddr, hp, memo, orderdate, status, totalprice, changedate)
+values ('test','test1', 2,'홍길동','1234','rewfew','fewwe','010-2222-1111',NULL, '2023-06-30','1','30000', NULL);
+
+insert into product_out (pocode, ordercode, procode, amount, cartcode)
+values ('534fsa','test', 1 ,2, 2);
+
 
 insert into member(id, pwd, email, hp, name) values('test1', 'test1', 'test1@test.com', '010-xxxx-xxxx', '홍길동');
 insert into product_rev(id, pwd, email, hp, name) values('test1', 'test1', 'test1@test.com', '010-xxxx-xxxx', '홍길동');
@@ -134,6 +150,7 @@ insert into product(procode, catecode, proname, proprice, prosale, proinfo, proy
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(2, 1, 'chair b', 2000, 500, '의자 b 입니다', 'Y', 20);
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(3, 1, 'chair c', 3000, 300, '의자 c 입니다', 'Y', 30);
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(7, 1, 'chair d', 4000, 400, '의자 4 입니다', 'Y', 30, 'https://www.namuddl.co.kr/shopimages/namuddl/0160010003883.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(101, 1, 'chair e', 5000, 500, '의자 5 입니다', 'Y', 30, 'https://www.namuddl.co.kr/shopimages/namuddl/0160010003883.jpg');
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(4, 2, 'bed a', 1100, 100, '침대 a 입니다', 'Y', 5);
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(5, 3, 'desk a', 5100, 1100, '책상 a 입니다', 'Y', 10);
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(6, 4, 'sofa a', 8000, 1000, '소파 a 입니다', 'Y', 15);
@@ -142,6 +159,12 @@ insert into category(catecode, catename) values(1, 'chair');
 insert into category(catecode, catename) values(2, 'bed');
 insert into category(catecode, catename) values(3, 'tabledesk');
 insert into category(catecode, catename) values(4, 'sofa');
+
+select * from product_op_color;
+insert into product_op_color values(1, '빨강', '주황', '노랑');
+select * from product_op_size;
+insert into product_op_size values(1, 'S', 'L', 'XL');
+commit;
 
 commit;
 
@@ -471,6 +494,13 @@ MINVALUE 1 MAXVALUE 9999 INCREMENT BY 1 START WITH 1 NOCYCLE ;
 CREATE SEQUENCE NOTICE_SEQ
 MINVALUE 1 MAXVALUE 9999 INCREMENT BY 1 START WITH 1 NOCYCLE ;
 
+CREATE SEQUENCE CART_SEQ
+MINVALUE 1 MAXVALUE 9999 INCREMENT BY 1 START WITH 1 NOCYCLE ;
+
+CREATE SEQUENCE PRODUCT_SEQ
+MINVALUE 1 MAXVALUE 9999 INCREMENT BY 20 START WITH 1 NOCYCLE ;
+
+drop sequence product_seq;
 
 ALTER TABLE PRODUCT MODIFY PROPRICE NUMBER(20);
 ALTER TABLE PRODUCT MODIFY PROSALE NUMBER(20);
@@ -486,6 +516,7 @@ REFERENCES "MEMBER"(
 	"ID"
 );
 
+commit;
 
 
 
@@ -636,3 +667,4 @@ ALTER TABLE "MEMBER" DROP COLUMN ADMIN
 
 
 commit;
+
