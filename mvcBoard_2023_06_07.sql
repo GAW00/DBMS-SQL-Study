@@ -121,9 +121,14 @@ select * from category;
 select * from member;
 select * from product_op_color;
 select * from product_op_size;
+select * from cart;
 
 delete from member;
 delete from member where id = 'test';
+delete from product where procode between 7 and 100;
+delete from cart where procode = 1;
+
+commit;
 
 update product set proimg = 'https://img.77g.com/shopping/prodLimg/w32133.jpg' where proname = 'chair a';
 update product set proimg = 'https://www.imwood.co.kr/news/photo/201502/12474-2-14774.jpg' where proname = 'chair b';
