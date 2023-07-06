@@ -122,12 +122,14 @@ select * from member;
 select * from product_op_color;
 select * from product_op_size;
 select * from cart;
+select * from pay;
 
 delete from member;
-delete from member where id = 'test';
+delete from member where id = '2897451099';
 delete from product where procode between 7 and 100;
-delete from cart where procode = 1;
-
+delete from cart where procode = 2;
+delete from cart where userid = 'test1';
+update member set pwd = 'test1' where id = 'test1';
 commit;
 
 update product set proimg = 'https://img.77g.com/shopping/prodLimg/w32133.jpg' where proname = 'chair a';
@@ -146,6 +148,8 @@ values ('534fsa','test', 1 ,2, 2);
 
 
 insert into member(id, pwd, email, hp, name) values('test1', 'test1', 'test1@test.com', '010-xxxx-xxxx', 'ȫ�浿');
+delete from member where id = 'test1';
+
 insert into product_rev(id, pwd, email, hp, name) values('test1', 'test1', 'test1@test.com', '010-xxxx-xxxx', 'ȫ�浿');
 
 
