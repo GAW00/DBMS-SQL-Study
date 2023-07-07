@@ -154,6 +154,9 @@ insert into product_rev(id, pwd, email, hp, name) values('test1', 'test1', 'test
 
 
 delete from product;
+delete from PRODUCT_QNA;
+delete from PRODUCT_REV;
+delete from REV_COMMENTS;
 
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(1, 1, 'chair a', 1000, 500, '의자 a 입니다', 'Y', 10);
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(2, 1, 'chair b', 2000, 500, '의자 b 입니다', 'Y', 20);
@@ -164,10 +167,69 @@ insert into product(procode, catecode, proname, proprice, prosale, proinfo, proy
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(5, 3, 'desk a', 5100, 1100, '책상 a 입니다', 'Y', 10);
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty) values(6, 4, 'sofa a', 8000, 1000, '소파 a 입니다', 'Y', 15);
 
+-- 카테고리
 insert into category(catecode, catename) values(1, 'chair');
 insert into category(catecode, catename) values(2, 'bed');
 insert into category(catecode, catename) values(3, 'tabledesk');
 insert into category(catecode, catename) values(4, 'sofa');
+insert into category(catecode, catename) values(5, 'drawer');
+insert into category(catecode, catename) values(6, 'tvtable');
+insert into category(catecode, catename) values(7, 'shelf');
+insert into category(catecode, catename) values(8, 'bookshelf');
+insert into category(catecode, catename) values(9, 'closet');
+insert into category(catecode, catename) values(0, 'dressingtable');
+
+-- 1. 의자
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(101, 1, 'chair a', 50000, 45000, '의자 a 입니다', 'Y', 30, 'https://www.namuddl.co.kr/shopimages/namuddl/0160010003883.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(102, 1, 'chair b', 40000, 38500, '의자 b 입니다', 'Y', 30, 'https://m.marketb.kr/web/product/big/202208/f9f2a21d363cc2560ba21b5cd8c5a710.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(103, 1, 'chair c', 60000, 50000, '의자 c 입니다', 'Y', 30, 'https://img.77g.com/shopping/prodLimg/w32133.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(104, 1, 'chair d', 55000, 51000, '의자 d 입니다', 'Y', 30, 'https://www.imwood.co.kr/news/photo/201502/12474-2-14774.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(105, 1, 'chair e', 58000, 5200, '의자 e 입니다', 'Y', 30, 'https://www.thediy.co.kr/data/goods/1/2009/03/2028_tmp_14871638490277large.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(106, 1, 'chair f', 100000, 85000, '의자 f 입니다', 'Y', 30, 'https://emons.co.kr/shop/data/goods/main_qk7IiY64Kp7ZiV.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(107, 1, 'chair g', 80000, 75000, '의자 g 입니다', 'Y', 30, 'https://m.abfurniture.co.kr/web/product/big/202103/06d0e6ce5690682073fc8b8b692124cd.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(108, 1, 'chair h', 70000, 65000, '의자 h 입니다', 'Y', 30, 'https://m.25w.co.kr/web/product/big/202301/9c12d93e9d8b192a7186864cbdd2b720.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(109, 1, 'chair i', 150000, 125000, '의자 i 입니다', 'Y', 30, 'https://m.apjrental.com/web/product/medium/201908/69cbaf8be368a3c590ca187d3c860dee.png');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(110, 1, 'chair j', 95000, 88000, '의자 j 입니다', 'Y', 30, 'https://t1.daumcdn.net/cfile/tistory/2637203E5325C0760F');
+-- 2. 침대
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(201, 2, 'bed a', 500000, 450000, '침대 a 입니다', 'Y', 30, 'https://m.mosdesign.co.kr/web/product/medium/202203/3c047f2145865534d04d01fe26db6196.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(202, 2, 'bed b', 400000, 385000, '침대 b 입니다', 'Y', 30, 'https://jangin.com/data/product/b_file_15899560228gir3d5899.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(203, 2, 'bed c', 600000, 500000, '침대 c 입니다', 'Y', 30, 'https://www.jangin.com/data/product/b_file_1551681994r2rea5srnr.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(204, 2, 'bed d', 550000, 510000, '침대 d 입니다', 'Y', 30, 'https://www.jangin.com/data/product/b_file_1653985696pksl5mlnv1.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(205, 2, 'bed e', 580000, 52000, '침대 e 입니다', 'Y', 30, 'https://m.plaire.co.kr/web/product/medium/202210/428a1d7f005715f57c9f2cad06b8aa61.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(206, 2, 'bed f', 1000000, 850000, '침대 f 입니다', 'Y', 30, 'https://m.plaire.co.kr/web/product/medium/202209/3a925ef2ee1c16e04685981e088b8168.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(207, 2, 'bed g', 800000, 750000, '침대 g 입니다', 'Y', 30, 'https://www.costco.co.kr/medias/sys_master/images/h06/h2f/87244890865694.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(208, 2, 'bed h', 700000, 650000, '침대 h 입니다', 'Y', 30, 'https://m.plaire.co.kr/web/product/medium/202201/098516c636c8fa3c1fa73b21e0bb9dc7.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(209, 2, 'bed i', 1500000, 1250000, '침대 i 입니다', 'Y', 30, 'https://www.ikea.com/kr/ko/images/products/kopardal-bed-frame-grey__1028815_pe835561_s5.jpg?f=s');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(210, 2, 'bed j', 950000, 880000, '침대 j 입니다', 'Y', 30, 'https://image.hanssem.com/hsimg/gds/368/724/724132_A1.jpg?v=20220824192153');
+-- 3. 테이블 책상
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(301, 3, 'tabledesk a', 50000, 45000, '테이블 a 입니다', 'Y', 30, 'https://m.roemfn.co.kr/web/product/big/202008/01ba07a4e056b1ab23919212d5161de2.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(302, 3, 'tabledesk b', 40000, 38500, '테이블 b 입니다', 'Y', 30, 'https://thumbnail.10x10.co.kr/webimage/image/add1/254/A002543353_01.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(303, 3, 'tabledesk c', 60000, 50000, '테이블 c 입니다', 'Y', 30, 'https://thumbnail.10x10.co.kr/webimage/image/basic600/202/B002023511.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(304, 3, 'tabledesk d', 55000, 51000, '테이블 d 입니다', 'Y', 30, 'https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/2665298594/B.jpg?876000000');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(305, 3, 'tabledesk e', 58000, 5200, '테이블 e 입니다', 'Y', 30, 'https://contents.lotteon.com/itemimage/LO/11/90/38/36/10/_1/19/03/83/61/1/LO1190383610_1190383611_1.jpg/dims/optimize/dims/resizemc/400x400');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(306, 3, 'tabledesk f', 100000, 85000, '테이블 f 입니다', 'Y', 30, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-x3r76ZUoNOIKVXt9rr_4fO0rxKbIg3kuzrtxgijcj19zRI6JfaGPpb6OvGTtHl28s2A&usqp=CAU');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(307, 3, 'tabledesk g', 80000, 75000, '테이블 g 입니다', 'Y', 30, 'https://qi-o.qoo10cdn.com/goods_image_big/4/1/2/2/7325794122_l.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(308, 3, 'tabledesk h', 70000, 65000, '테이블 h 입니다', 'Y', 30, 'https://openimage.interpark.com/goods_image_big/6/7/9/1/9244746791c_l.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(309, 3, 'tabledesk i', 150000, 125000, '테이블 i 입니다', 'Y', 30, 'https://contents.lotteon.com/itemimage/_v000819/LO/21/22/41/86/70/_2/12/24/18/67/1/LO2122418670_2122418671_1.jpg/dims/optimize/dims/resizemc/400x400');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(310, 3, 'tabledesk j', 95000, 88000, '테이블 j 입니다', 'Y', 30, 'https://sitem.ssgcdn.com/24/25/69/item/1000519692524_i1_500.jpg');
+-- 4. 소파
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(401, 4, 'sofa a', 250000, 145000, '소파 a 입니다', 'Y', 30, 'https://wekino.co.kr/web/product/small/202303/74f746bf96f54f083d9c7749a4ac8eb4.png');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(402, 4, 'sofa b', 2240000, 138500, '소파 b 입니다', 'Y', 30, 'https://www.jangin.com/data/product/b_file_162244383908rqp5zlz8.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(403, 4, 'sofa c', 360000, 250000, '소파 c 입니다', 'Y', 30, 'https://www.jangin.com/data/product/b_file_1586757934r44ojmj447.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(404, 4, 'sofa d', 255000, 151000, '소파 d 입니다', 'Y', 30, 'https://m.younggagu.com/web/product/medium/202112/78ca8fef2b8be59e6155ea4087c02a7e.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(405, 4, 'sofa e', 258000, 115200, '소파 e 입니다', 'Y', 30, 'https://m.oneroommaking.com/web/product/extra/big/202110/a0392ae70698beb5d1d301db4c434c33.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(406, 4, 'sofa f', 120000, 85000, '소파 f 입니다', 'Y', 30, 'https://m.oneroommaking.com/web/product/extra/big/202110/66b8f2849cbca738914f576847549118.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(407, 4, 'sofa g', 380000, 275000, '소파 g 입니다', 'Y', 30, 'https://image.yes24.com/goods/69168393/XL');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(408, 4, 'sofa h', 270000, 165000, '소파 h 입니다', 'Y', 30, 'https://qi-o.qoo10cdn.com/goods_image_big/3/8/4/8/7427983848_l.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(409, 4, 'sofa i', 150000, 125000, '소파 i 입니다', 'Y', 30, 'https://openimage.interpark.com/goods_image_big/9/7/1/8/9181279718_l.jpg');
+insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(410, 4, 'sofa j', 295000, 188000, '소파 j 입니다', 'Y', 30, 'https://m.younggagu.com/web/product/medium/201905/b7947c1c64c9fd195e2fd4b1b42d668e.jpg');
+
+
+
+
+
+
+
 
 select * from product_op_color;
 insert into product_op_color values(1, '빨강', '주황', '노랑');
