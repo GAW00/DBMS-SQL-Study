@@ -207,7 +207,7 @@ insert into product(procode, catecode, proname, proprice, prosale, proinfo, proy
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(303, 3, 'tabledesk c', 60000, 50000, '테이블 c 입니다', 'Y', 30, 'https://thumbnail.10x10.co.kr/webimage/image/basic600/202/B002023511.jpg');
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(304, 3, 'tabledesk d', 55000, 51000, '테이블 d 입니다', 'Y', 30, 'https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/2665298594/B.jpg?876000000');
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(305, 3, 'tabledesk e', 58000, 5200, '테이블 e 입니다', 'Y', 30, 'https://contents.lotteon.com/itemimage/LO/11/90/38/36/10/_1/19/03/83/61/1/LO1190383610_1190383611_1.jpg/dims/optimize/dims/resizemc/400x400');
-insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(306, 3, 'tabledesk f', 100000, 85000, '테이블 f 입니다', 'Y', 30, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-x3r76ZUoNOIKVXt9rr_4fO0rxKbIg3kuzrtxgijcj19zRI6JfaGPpb6OvGTtHl28s2A&usqp=CAU');
+--insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(306, 3, 'tabledesk f', 100000, 85000, '테이블 f 입니다', 'Y', 30, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-x3r76ZUoNOIKVXt9rr_4fO0rxKbIg3kuzrtxgijcj19zRI6JfaGPpb6OvGTtHl28s2A&usqp=CAU');
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(307, 3, 'tabledesk g', 80000, 75000, '테이블 g 입니다', 'Y', 30, 'https://qi-o.qoo10cdn.com/goods_image_big/4/1/2/2/7325794122_l.jpg');
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(308, 3, 'tabledesk h', 70000, 65000, '테이블 h 입니다', 'Y', 30, 'https://openimage.interpark.com/goods_image_big/6/7/9/1/9244746791c_l.jpg');
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(309, 3, 'tabledesk i', 150000, 125000, '테이블 i 입니다', 'Y', 30, 'https://contents.lotteon.com/itemimage/_v000819/LO/21/22/41/86/70/_2/12/24/18/67/1/LO2122418670_2122418671_1.jpg/dims/optimize/dims/resizemc/400x400');
@@ -224,18 +224,109 @@ insert into product(procode, catecode, proname, proprice, prosale, proinfo, proy
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(409, 4, 'sofa i', 150000, 125000, '소파 i 입니다', 'Y', 30, 'https://openimage.interpark.com/goods_image_big/9/7/1/8/9181279718_l.jpg');
 insert into product(procode, catecode, proname, proprice, prosale, proinfo, proyn, proqty, proimg) values(410, 4, 'sofa j', 295000, 188000, '소파 j 입니다', 'Y', 30, 'https://m.younggagu.com/web/product/medium/201905/b7947c1c64c9fd195e2fd4b1b42d668e.jpg');
 
+declare
+    i number := 101;
+begin
+  while i <= 110 loop
+    insert into PRODUCT_OP_COLOR values(i, '빨강', '파랑', '노랑');
+    i := i + 1;
+  end loop;
+end;
+
+declare
+    i number := 101;
+begin
+  while i <= 110 loop
+    insert into PRODUCT_OP_SIZE values(i, 'S', 'M', 'L');
+    i := i + 1;
+  end loop;
+end;
+
+declare
+    i number := 201;
+begin
+  while i <= 210 loop
+    insert into PRODUCT_OP_COLOR values(i, '빨강', '파랑', '노랑');
+    i := i + 1;
+  end loop;
+end;
+
+declare
+    i number := 201;
+begin
+  while i <= 210 loop
+    insert into PRODUCT_OP_SIZE values(i, 'S', 'M', 'L');
+    i := i + 1;
+  end loop;
+end;
 
 
+select * from notice;
+insert into notice(noticode, notititle, noticont, notiauth) values(notice_SEQ.NEXTVAL, '공지입니다', '다들 공지사항 확인해 주세요!', 'ADMIN');
+
+select * from member;
+insert into member(ID, PWD, EMAIL, HP, NAME, PCODE) values('asdqwe12', 'password', 'asdqwe12@sdf.com', '010-1222-2222', '김나박', '15162');
+insert into member(ID, PWD, EMAIL, HP, NAME, PCODE) values('asdqwe123', 'password', 'asdqwe123@sdf.com', '010-1222-2223', '김최이', '15547');
+insert into member(ID, PWD, EMAIL, HP, NAME, PCODE) values('asdqwe124', 'password', 'asdqwe124@sdf.com', '010-1222-2224', '강지박', '26162');
+insert into member(ID, PWD, EMAIL, HP, NAME, PCODE) values('asdqwe125', 'password', 'asdqwe125@sdf.com', '010-1222-2225', '박구정', '1782');
+
+select * from product_op_color;
+
+declare
+    i number := 1;
+begin
+  for i in 4..10 loop
+    insert into PRODUCT_OP_COLOR values(TO_NUMBER('10'||i), '빨강', '파랑', '노랑');
+  end loop;
+end;
+
+--DECLARE 
+--BEGIN 
+--FOR i IN 1..1000000 LOOP
+--INSERT INTO TEST_EXAMPLE_TB VALUES (i, vn_data1 || i, vn_data2 || i);
+--END LOOP;
+--
+--declare
+--begin
+--  for i in 4..10 loop
+--    insert into PRODUCT_OP_COLOR values('10'||i, '빨강', '파랑', '노랑');
+--  end loop;
+--end;
+--
+--begin
+--  for i in 4..10 loop
+--    insert into PRODUCT_OP_SIZE(PROCODE, SIZE1, SIZE2, SIZE3) values('10'||i, 'S', 'M', 'L');
+--  end loop;
+--end;
+
+commit;
 
 
+delete from cart;
 
-
-
+select * from admin;
+select * from product;
+select * from member;
+select * from cart;
 select * from product_op_color;
 insert into product_op_color values(1, '빨강', '주황', '노랑');
 select * from product_op_size;
 insert into product_op_size values(1, 'S', 'L', 'XL');
-commit;
+insert into product_ord(ordercode, userid, cartcode, name, postcode, addr, etcaddr, hp, memo, totalprice, status) values('abc123456', 'tteesstt', '202307100118/tteesstt/101/빨강/S', '손놈', '40624', '가', '나', '010-1235-1234', '메모', 110000, 1);
+select * from product_ord;
+insert into product_out(pocode, ordercode, procode, amount, status, cartcode) values('12345', 'abc123456', 101, 1, 1, '202307100118/tteesstt/101/빨강/S');
+select * from product_out;
+
+
+SELECT rownum rn, p.proimg, p.proName, p.proPrice, o.ordercode, o.totalprice, po.amount, po.status, po.pocode, o.orderdate,
+	       COUNT(*) OVER () AS count
+		FROM PRODUCT p
+		INNER JOIN PRODUCT_OUT po ON p.procode = po.procode
+		INNER JOIN PRODUCT_ORD o ON o.ordercode = po.ordercode
+		WHERE o.userid = 'tteesstt';
+
+select * from notice;
+delete from notice where noticode = 3;
 
 commit;
 
@@ -546,6 +637,24 @@ ALTER TABLE "PRODUCT_QNA_RE" ADD CONSTRAINT "FK_PRODUCT_QNA_TO_QNA_RE" FOREIGN K
 REFERENCES "PRODUCT_QNA"(
 	"QNACODE"
 );
+
+
+ALTER TABLE PRODUCT_REV ADD(CARTCODE VARCHAR2(50 BYTE) NOT NULL);
+
+ALTER TABLE product_rev
+ADD CONSTRAINT "FK_CART_TO_PRODUCT_REV" foreign KEY("CARTCODE") references CART ("CARTCODE");
+
+ALTER TABLE PRODUCT_QNA ADD(CARTCODE VARCHAR2(50 BYTE) NOT NULL);
+
+ALTER TABLE PRODUCT_QNA
+ADD CONSTRAINT "FK_CART_TO_PRODUCT_QNA" foreign KEY("CARTCODE") references CART ("CARTCODE");
+
+
+ALTER TABLE PRODUCT_REV ADD(REVTHUMB VARCHAR2(500) NULL,
+                                                    REVIMG VARCHAR2(500) NULL);
+                                                    
+ALTER TABLE PRODUCT_QNA ADD(QNATHUMB VARCHAR2(500) NULL,
+                                                    QNAIMG VARCHAR2(500) NULL);
 
 
 
