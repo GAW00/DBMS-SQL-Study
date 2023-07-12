@@ -1,4 +1,6 @@
-select * from mvc_board order by bname;
+select * from mvc_board;
+delete from mvc_board where bid != 1;
+commit;
 
 SELECT bid, bname, btitle, bcontent, bdate, bhit 
 from (SELECT rownum rn, bid, bname, btitle, bcontent, bdate, bhit 
