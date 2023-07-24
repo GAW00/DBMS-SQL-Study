@@ -1,6 +1,12 @@
+select * from dept;
+select * from emp;
+
+select * from mvc_member;
 select * from mvc_board;
 delete from mvc_board where bid != 1;
 commit;
+
+select * from item;
 
 SELECT bid, bname, btitle, bcontent, bdate, bhit 
 from (SELECT rownum rn, bid, bname, btitle, bcontent, bdate, bhit 
